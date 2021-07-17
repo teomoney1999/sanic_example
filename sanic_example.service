@@ -6,6 +6,11 @@ User=nobody
 WorkingDirectory=/srv/sanicexample
 ExecStart=/usr/bin/env python3 sanicexample.py
 Restart=always
+Restart=on-failure
+PrivateTmp=true
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
 
 [Install]
 WantedBy=multi-user.target
