@@ -1,0 +1,11 @@
+[Unit]
+Description=Sanic Example
+
+[Service]
+User=nobody
+WorkingDirectory=/srv/sanicexample
+ExecStart=/usr/bin/env python3 sanicexample.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
